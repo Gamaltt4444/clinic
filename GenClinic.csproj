@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1CAABC4E-6F5D-44F7-8E54-96E2C16F34BC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GenClinic</RootNamespace>
+    <AssemblyName>GenClinic</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>EB7237BEE3CCAB3EDE42956DB31FD31FAE188FFE</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GenClinic_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1486836903_doctor.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Interop.WIALib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Interop.WIALib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About_program.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About_program.designer.cs">
+      <DependentUpon>About_program.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdddModifyMedcine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdddModifyMedcine.Designer.cs">
+      <DependentUpon>AdddModifyMedcine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdddModifyGruaa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdddModifyGruaa.Designer.cs">
+      <DependentUpon>AdddModifyGruaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdddModifyGruaaWay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdddModifyGruaaWay.Designer.cs">
+      <DependentUpon>AdddModifyGruaaWay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdddModifyXRay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdddModifyXRay.Designer.cs">
+      <DependentUpon>AdddModifyXRay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdddModifyTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdddModifyTest.Designer.cs">
+      <DependentUpon>AdddModifyTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backup_Restore_Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup_Restore_Form7.designer.cs">
+      <DependentUpon>Backup_Restore_Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changeUserPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeUserPass.designer.cs">
+      <DependentUpon>changeUserPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdddModifyTamin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdddModifyTamin.Designer.cs">
+      <DependentUpon>AdddModifyTamin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NortWindEntities.cs" />
+    <Compile Include="rosata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rosata.Designer.cs">
+      <DependentUpon>rosata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewImage.designer.cs">
+      <DependentUpon>frmNewImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenClinicDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenClinicDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GenClinicDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenClinicDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GetFileAndPhoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetFileAndPhoto.designer.cs">
+      <DependentUpon>GetFileAndPhoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HagzReportBetweenTwoDates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HagzReportBetweenTwoDates.Designer.cs">
+      <DependentUpon>HagzReportBetweenTwoDates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hagz_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hagz_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="hagz_report2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hagz_report2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="hagz_report2_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hagz_report2_Form.Designer.cs">
+      <DependentUpon>hagz_report2_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hagz_report_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hagz_report_Form.Designer.cs">
+      <DependentUpon>hagz_report_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KashfHagz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KashfHagz.Designer.cs">
+      <DependentUpon>KashfHagz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HagzKashf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HagzKashf.Designer.cs">
+      <DependentUpon>HagzKashf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KashfOLD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KashfOLD.Designer.cs">
+      <DependentUpon>KashfOLD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForm.designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KashfReportBetweenTwoDates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KashfReportBetweenTwoDates.Designer.cs">
+      <DependentUpon>KashfReportBetweenTwoDates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN.designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedcineKashf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedcineKashf.Designer.cs">
+      <DependentUpon>MedcineKashf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedcineReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedcineReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MedcinReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedcinReport.Designer.cs">
+      <DependentUpon>MedcinReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedcinReportAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedcinReportAccess.Designer.cs">
+      <DependentUpon>MedcinReportAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedcinReportAccess2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedcinReportAccess2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatientKashf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientKashf.Designer.cs">
+      <DependentUpon>PatientKashf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oldPatientKashf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oldPatientKashf.Designer.cs">
+      <DependentUpon>oldPatientKashf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPatient.Designer.cs">
+      <DependentUpon>AddPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kashf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kashf.Designer.cs">
+      <DependentUpon>Kashf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZPrintDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZPrintDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About_program.resx">
+      <DependentUpon>About_program.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdddModifyMedcine.resx">
+      <DependentUpon>AdddModifyMedcine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdddModifyGruaa.resx">
+      <DependentUpon>AdddModifyGruaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdddModifyGruaaWay.resx">
+      <DependentUpon>AdddModifyGruaaWay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdddModifyXRay.resx">
+      <DependentUpon>AdddModifyXRay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdddModifyTest.resx">
+      <DependentUpon>AdddModifyTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup_Restore_Form7.resx">
+      <DependentUpon>Backup_Restore_Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeUserPass.resx">
+      <DependentUpon>changeUserPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdddModifyTamin.resx">
+      <DependentUpon>AdddModifyTamin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewImage.resx">
+      <DependentUpon>frmNewImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetFileAndPhoto.resx">
+      <DependentUpon>GetFileAndPhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HagzReportBetweenTwoDates.resx">
+      <DependentUpon>HagzReportBetweenTwoDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hagz_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>hagz_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hagz_report2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>hagz_report2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hagz_report2_Form.resx">
+      <DependentUpon>hagz_report2_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hagz_report_Form.resx">
+      <DependentUpon>hagz_report_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KashfHagz.resx">
+      <DependentUpon>KashfHagz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HagzKashf.resx">
+      <DependentUpon>HagzKashf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KashfOLD.resx">
+      <DependentUpon>KashfOLD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KashfReportBetweenTwoDates.resx">
+      <DependentUpon>KashfReportBetweenTwoDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN.resx">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedcineKashf.resx">
+      <DependentUpon>MedcineKashf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedcineReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MedcineReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedcinReport.resx">
+      <DependentUpon>MedcinReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedcinReportAccess.resx">
+      <DependentUpon>MedcinReportAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedcinReportAccess2.resx">
+      <DependentUpon>MedcinReportAccess2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedcinReportAccess2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MedcinReportAccess2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientKashf.resx">
+      <DependentUpon>PatientKashf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oldPatientKashf.resx">
+      <DependentUpon>oldPatientKashf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPatient.resx">
+      <DependentUpon>AddPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kashf.resx">
+      <DependentUpon>Kashf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rosata.resx">
+      <DependentUpon>rosata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestDesign.resx">
+      <DependentUpon>TestDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="GenClinicDBDataSet.xsc">
+      <DependentUpon>GenClinicDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GenClinicDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GenClinicDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GenClinicDBDataSet.xss">
+      <DependentUpon>GenClinicDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GenClinicDBDataSet1.xsc">
+      <DependentUpon>GenClinicDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GenClinicDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GenClinicDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GenClinicDBDataSet1.xss">
+      <DependentUpon>GenClinicDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GenClinic_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TestDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestDesign.Designer.cs">
+      <DependentUpon>TestDesign.cs</DependentUpon>
+    </Compile>
+    <None Include="ZPrintDBDataSet.xsc">
+      <DependentUpon>ZPrintDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ZPrintDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZPrintDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZPrintDBDataSet.xss">
+      <DependentUpon>ZPrintDBDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log Out_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TOOLS.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1274099190_reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAGNIFY.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486836903_doctor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check_24x241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gettyimages-941762276-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\281465631_539435290886329_329712805991353999_n.png" />
+    <Content Include="1486836903_doctor.ico" />
+    <Content Include="Resources\rosa2.jpg" />
+    <None Include="Resources\rosa21.jpg" />
+    <Content Include="Resources\rosta.jpg" />
+    <None Include="Resources\softwave1.jpg" />
+    <None Include="Resources\Softwave.jpg" />
+    <None Include="Resources\rosta1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
